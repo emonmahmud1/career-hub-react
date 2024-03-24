@@ -1,5 +1,6 @@
 
-const AppliedJob = () => {
+const AppliedJob = ({job}) => {
+    
     return (
         <div>
             

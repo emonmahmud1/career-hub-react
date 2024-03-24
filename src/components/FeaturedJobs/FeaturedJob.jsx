@@ -7,7 +7,6 @@ const FeaturedJob = ({job}) => {
     const {id,logo,job_title,company_name,remote_or_onsite,job_type, location,salary }=job;
    
    
-   
     return (
         <div className='p-10 border rounded-xl'>
             <div className='mb-8'>

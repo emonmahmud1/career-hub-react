@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { getDataFromLocalStorage } from "../../localStorage";
 import { useLoaderData } from "react-router-dom";
+import AppliedJob from "./AppliedJob";
+import FeaturedJob from "../FeaturedJobs/FeaturedJob";
 
 const AppliedJobs = () => {
     const jobs = useLoaderData();
@@ -12,8 +14,8 @@ const AppliedJobs = () => {
       const remainingIds= jobs.filter(job => storeId.includes(job.id));
       setGetId(remainingIds)
 
-    },[]);
-    console.log(getid);
+    },[jobs]);
+    
 
     return (
         <div >
@@ -23,10 +25,11 @@ const AppliedJobs = () => {
                 <img className="absolute right-0 -top-16" src="images/bg2.png" alt="" />
             </div>
 
-            <div>
+            <div className="w-10/12 m-auto grid gap-10">
                 {
                     getid.map((job)=> (
-                        <h1 key={job.id}>{job.job_title}</h1>
+                        // <AppliedJob key={job.id} job={job}></AppliedJob>
+                        <FeaturedJob key={job.id} job={job}></FeaturedJob>
                     ))
 
                 }
