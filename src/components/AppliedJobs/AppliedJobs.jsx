@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getDataFromLocalStorage } from "../../localStorage";
 import { useLoaderData } from "react-router-dom";
-import AppliedJob from "./AppliedJob";
 import FeaturedJob from "../FeaturedJobs/FeaturedJob";
 
 const AppliedJobs = () => {
@@ -14,7 +13,7 @@ const AppliedJobs = () => {
       const remainingIds= jobs.filter(job => storeId.includes(job.id));
       setGetId(remainingIds)
 
-    },[jobs]);
+    },[]);
     
 
     return (

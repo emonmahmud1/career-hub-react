@@ -7,7 +7,7 @@ const JobList = ({job}) => {
 
             <img className="h-11 w-11" src={logo} alt="" />
             </div>
-            <h2 className="text-xl font-extrabold text[#474747]">{category_name}</h2>
+            <h2 className="lg:text-xl text-lg font-extrabold text[#474747]">{category_name}</h2>
             <p className="text-[#A3A3A3] font-medium">{availability} </p>
             
         </div>

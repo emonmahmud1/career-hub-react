@@ -8,7 +8,7 @@ const FeaturedJob = ({job}) => {
    
    
     return (
-        <div className='p-10 border rounded-xl'>
+        <div className='p-4 lg:p-10 border rounded-xl'>
             <div className='mb-8'>
 
             <img className='h-10 w-24' src={logo} alt="" />
