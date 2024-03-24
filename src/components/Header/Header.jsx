@@ -34,7 +34,7 @@ const Header = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-4">
           <li><NavLink to="/"  className={ ({ isActive }) => (isActive ? 'bg-[#7E90FE]' : ' ')}>Statistic</NavLink></li>
-          <li> <NavLink to="/Home" className={({ isActive }) => (isActive ? 'bg-[#7E90FE]' : ' ')} >Applied Job</NavLink></li>
+          <li> <NavLink to="/appliedjobs" className={({ isActive }) => (isActive ? 'bg-[#7E90FE]' : ' ')} >Applied Job</NavLink></li>
           <li> <NavLink to="/Root" className={({ isActive }) => (isActive ? 'bg-[#7E90FE]' : ' ')}>Blog</NavLink></li>
         </ul>
       </div>

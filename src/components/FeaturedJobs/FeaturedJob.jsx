@@ -1,9 +1,13 @@
 import PropTypes from 'prop-types';
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineDollar } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 const FeaturedJob = ({job}) => {
-    const {logo,job_title,company_name,remote_or_onsite,job_type, location,salary }=job;
+    const {id,logo,job_title,company_name,remote_or_onsite,job_type, location,salary }=job;
+   
+   
+   
     return (
         <div className='p-10 border rounded-xl'>
             <div className='mb-8'>
@@ -21,7 +25,9 @@ const FeaturedJob = ({job}) => {
                 <p className='flex items-center gap-1'><AiOutlineDollar/>{salary}</p>
             </div>
             <div className='mt-6'>
+                <Link to={`/jobdetails/${id}`}>
                 <button className=' btn bg-[#7E90FE] text-white font-bold text-xl'>View Details</button>
+                </Link>
             </div>
         </div>
     );

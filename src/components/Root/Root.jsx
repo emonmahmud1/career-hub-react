@@ -1,20 +1,19 @@
+import Header from "./../Header/Header";
 
-import Header from './../Header/Header';
-import Home from './../Home/Home';
-import Footer from './../Footer/Footer';
+import Footer from "./../Footer/Footer";
+import { Outlet } from "react-router-dom";
 const Root = () => {
-    return (
-        <div>
-            
-            <Header></Header>
-            <Home></Home>
-        <div className='mt-24'>
-            
-            <Footer></Footer>
-        </div>
-            
-        </div>
-    );
+  return (
+    <div>
+      <div className="w-10/12 m-auto ">
+        <Header></Header>
+      </div>
+      <Outlet></Outlet>
+      <div className="mt-24">
+        <Footer></Footer>
+      </div>
+    </div>
+  );
 };
 
 export default Root;
