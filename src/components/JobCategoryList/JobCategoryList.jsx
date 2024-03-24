@@ -10,7 +10,7 @@ const JobCategoryList = () => {
         .then((data)=> setJobCategory(data))
     },[]);
   return (
-    <div className="w-10/12 m-auto">
+    <div className="">
       <div className="text-center mb-8">
         <h1 className="font-extrabold text-4xl mb-4">Job Category List</h1>
         <p className="font-medium text-[#757575]">
@@ -18,7 +18,7 @@ const JobCategoryList = () => {
           need. Its your future
         </p>
       </div>
-    <div className="grid grid-cols-4 gap-6">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
 
     {
         jobCategory.map((job)=> (
