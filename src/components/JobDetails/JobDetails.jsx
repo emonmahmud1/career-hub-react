@@ -1,10 +1,13 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { setDataInLocalStorage } from "../../localStorage";
 const JobDetails = () => {
   const jobs = useLoaderData();
   const { id } = useParams();
   const job = jobs.find((job) => job.id == id);
- 
+ const handleSetLocalStorage = () => {
+    setDataInLocalStorage(id);
+ };
   const {
     job_title,
     job_description,
@@ -79,7 +82,7 @@ const JobDetails = () => {
             </div>
             <div className="mt-4">
                 <Link>
-                <button className="btn bg-[#9873FF] text-white font-semibold w-full text-xl">Apply Now</button>
+                <button onClick={handleSetLocalStorage} className="btn bg-[#9873FF] text-white font-semibold w-full text-xl">Apply Now</button>
                 </Link>
             </div>
        

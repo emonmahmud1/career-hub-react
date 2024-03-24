@@ -1,5 +1,20 @@
+import { useEffect, useState } from "react";
+import { getDataFromLocalStorage } from "../../localStorage";
+import { useLoaderData } from "react-router-dom";
 
 const AppliedJobs = () => {
+    const jobs = useLoaderData();
+    const [getid,setGetId]= useState([]);
+    useEffect(() => {
+
+      const getstorageDataId=  getDataFromLocalStorage();
+      const storeId =getstorageDataId.map(id => parseInt(id));
+      const remainingIds= jobs.filter(job => storeId.includes(job.id));
+      setGetId(remainingIds)
+
+    },[]);
+    console.log(getid);
+
     return (
         <div >
             <div className=" mb-36  relative  h-[300px]">
@@ -8,9 +23,15 @@ const AppliedJobs = () => {
                 <img className="absolute right-0 -top-16" src="images/bg2.png" alt="" />
             </div>
 
-            <div className="">
-               
+            <div>
+                {
+                    getid.map((job)=> (
+                        <h1 key={job.id}>{job.job_title}</h1>
+                    ))
+
+                }
             </div>
+
         </div>
     );
 };
